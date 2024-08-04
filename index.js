@@ -1,13 +1,15 @@
-// Setup a http web server to listen on port 3001
-// import http module
-const http = require('http');
+// import the express module
+const express = require('express');
 
-// Create a http server -> using createServer method from http module
-const server = http.createServer((request, response) => {
-    response.end('Hello World');
+// create an express application
+const app = express();
+
+// Define a route handler for the default "GET" request "/"
+app.get("/", (request, response) => {
+    response.send("Hello World!");
 });
 
-// Listen on port 3001
-server.listen(3001, '127.0.0.1', () => {
-    console.log(`Server is running on http://127.0.0.1:3001`);
+// start the server and listen on port 3001
+app.listen(3001, () => {
+    console.log(`Server running on port 3001 at http://127.0.0.1:3001`);
 });

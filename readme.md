@@ -668,7 +668,7 @@ Note: this will exclude id, name but includes price, quantity, \_id.
 
 [x] use of operators in find()  
 [x] basic cursor methods - map, toArray, pretty, forEach, limit, count, sort  
-[ ] Aggregation
+[x] Aggregation
 
 #### Use of operators in find()
 
@@ -798,3 +798,66 @@ Skip the results and limit the results
 ```sql
 db.products.find().skip(2).limit(3);
 ```
+
+#### Aggregation
+
+- Aggregation is a process of transforming the data into a meaningful format (sum, average, count, etc).
+- Aggregation is a pipeline of stages.
+
+### Nodejs- Day -1 : Nodejs
+
+#### Contents:
+
+[x] what is the client?  
+[x] what is the server?  
+[x] What is nodejs?  
+[x] Npm packages
+
+- In build
+- Third-party
+- Custom
+
+#### What is a Client?
+
+- A client is a device that requests data from a server using a web browser (Chrome, Firefox, Safari, etc).
+
+#### What is a Server?
+
+- A server is a computer that serves data to the client.
+
+#### What is Node.js?
+
+- Node.js is an open-source, cross-platform, JavaScript runtime environment that executes JavaScript code outside a web browser.
+
+#### NPM Packages
+
+- In build
+  - http
+  - fs
+  - path
+  - url
+- Third-party
+  - express: to create a server
+  - mongoose: to connect to MongoDB
+  - nodemailer: to send emails
+  - body-parser: to parse the body of the request
+  - cors: to enable cross-origin resource sharing
+  - dotenv: to load environment variables
+  - bcrypt: to hash the password
+  - jwt: to generate a token
+  - multer: to upload files
+  - axios: to make HTTP requests
+  - morgan: to log the requests
+- Custom
+  - logger: to log the messages
+  - validator: to validate the data
+  - auth: to authenticate the user
+  - db: to connect to the database
+  - config: to load the configuration
+  - routes: to define the routes
+  - controllers: to handle the requests
+  - models: to define the schema
+  - services: to perform the operations
+  - middlewares: to handle the requests
+  - authorization: to authorize the user
+  - error: to handle the errors

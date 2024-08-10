@@ -861,3 +861,31 @@ db.products.find().skip(2).limit(3);
   - middlewares: to handle the requests
   - authorization: to authorize the user
   - error: to handle the errors
+
+### Nodejs- Day -2 : Nodejs & Expressj.s
+
+#### Contents:
+
+[x] What is express  
+[x] API methods  
+[ ] Request response objects  
+[ ] Url & Query parameters
+
+#### What is Express?
+
+- Express is a minimal and flexible Node.js web application framework that provides a robust set of features to develop web and mobile applications.
+- As application grows complex, we need a framework to manage the routes, requests, responses, etc.
+- Express is a framework that helps to manage the routes, requests, responses, etc.
+
+#### API Methods
+
+- get: to get the data
+- post: to post the data
+- put: to update the data
+- delete: to delete the data
+
+#### API Versioning
+
+- It is a way to version the API.
+- It is a way to manage the API versions.
+- It is a way to maintain the backward compatibility of the API.

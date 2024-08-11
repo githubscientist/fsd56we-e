@@ -868,8 +868,8 @@ db.products.find().skip(2).limit(3);
 
 [x] What is express  
 [x] API methods  
-[ ] Request response objects  
-[ ] Url & Query parameters
+[x] Request response objects  
+[x] Url & Query parameters
 
 #### What is Express?
 

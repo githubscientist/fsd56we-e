@@ -31,6 +31,8 @@ let todos = [
     }
 ];
 
+const fs = require('fs');
+
 // import the express module
 const express = require('express');
 
@@ -41,42 +43,18 @@ const app = express();
 app.use(express.json());
 
 // Define a route handler for the default "GET" request "/"
-app.get("/api/v1/todos", (request, response) => {
-    response.json(todos);
+app.get("/createFile", (request, response) => {
+    // your logic goes here to get the current timestamp and format it
+    // and make it as a file name and the value to be written in the file
+
+    // create a file in a folder called as files
+    fs.writeFile('files/file.txt', 'Hello World!', () => {
+        response.send('File created successfully');
+    });
 });
 
-app.get("/api/v1/todos/:id", (request, response) => {
-    const id = request.params.id;
-    const todo = todos.find(todo => todo.id === id);
-    response.json(todo);
-});
-
-app.post("/api/v1/todos", (request, response) => {
-    const todo = request.body;
-    todos.push(todo);
-    response.json(todo);
-});
-
-app.put("/api/v1/todos/:id", (request, response) => {
-    const id = request.params.id;
-    const todo = todos.find(todo => todo.id === id);
-
-    todo.description = request.body.description;
-    todo.status = request.body.status;
-
-    const filteredTodos = todos.filter(todo => todo.id !== id);
-    filteredTodos.push(todo);
-
-    todos = filteredTodos;
-
-    response.json(todo);
-});
-
-app.delete("/api/v1/todos/:id", (request, response) => {
-    const id = request.params.id;
-    const todoIndex = todos.findIndex(todo => todo.id === id);
-    todos.splice(todoIndex, 1);
-    response.json({ message: `Todo ${id} deleted` });
+app.post("/getAllFiles", (request, response) => {
+    
 });
 
 // start the server and listen on port 3001

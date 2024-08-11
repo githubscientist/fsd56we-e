@@ -31,6 +31,8 @@ let todos = [
     }
 ];
 
+const mongoose = require('mongoose');
+
 // import the express module
 const express = require('express');
 
@@ -87,3 +89,11 @@ app.delete("/api/v1/todos/:id", (request, response) => {
 app.listen(3001, () => {
     console.log(`Server running on port 3001 at http://127.0.0.1:3001`);
 });
+
+mongoose.connect('mongodb://localhost:27017/fsd56wee')
+    .then(() => {
+        console.log('Connected to MongoDB');
+    })
+    .catch((error) => {
+        console.error('Error connecting to MongoDB: ', error);
+    });

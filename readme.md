@@ -889,3 +889,14 @@ db.products.find().skip(2).limit(3);
 - It is a way to version the API.
 - It is a way to manage the API versions.
 - It is a way to maintain the backward compatibility of the API.
+
+# Nodejs- Day -3 : Node & mongo DB connectivity
+
+#### Contents:
+
+[x] Connection to MongoDB(local & atlas)
+
+#### Mongoose module
+
+- Mongoose is a MongoDB object modeling tool designed to work in an asynchronous environment.
+- Mongoose provides a straight-forward, schema-based solution to model the application data.

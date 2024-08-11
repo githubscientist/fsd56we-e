@@ -33,6 +33,8 @@ let todos = [
 
 const mongoose = require('mongoose');
 
+require('dotenv').config();
+
 // import the express module
 const express = require('express');
 
@@ -90,7 +92,7 @@ app.listen(3001, () => {
     console.log(`Server running on port 3001 at http://127.0.0.1:3001`);
 });
 
-mongoose.connect('mongodb://localhost:27017/fsd56wee')
+mongoose.connect(process.env.MONGODB_URI)
     .then(() => {
         console.log('Connected to MongoDB');
     })

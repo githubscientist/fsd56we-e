@@ -900,3 +900,7 @@ db.products.find().skip(2).limit(3);
 
 - Mongoose is a MongoDB object modeling tool designed to work in an asynchronous environment.
 - Mongoose provides a straight-forward, schema-based solution to model the application data.
+
+#### Middleware
+
+- Middleware is a function that has access to the request object (req), the response object (res), and the next middleware function in the application's request-response cycle.

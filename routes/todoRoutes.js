@@ -7,6 +7,8 @@ const todoRouter = express.Router();
 todoRouter.post('/', todoController.createTodo);
 todoRouter.get('/', todoController.getTodos);
 todoRouter.get('/:id', todoController.getTodo);
+todoRouter.put('/:id', todoController.updateTodo);
+todoRouter.delete('/:id', todoController.deleteTodo);
 
 // export the router
 module.exports = todoRouter;

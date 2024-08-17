@@ -22,11 +22,9 @@ const todoController = {
     },
     getTodos: async (req, res) => {
         try {
-            console.log(req.query);
-            console.log(req.method);
-            console.log(req.url);
-            console.log(req.params);
-            console.log(req.body);
+            const todos = await Todo.find({}, { __v: 0 });
+
+            res.status(200).send({ message: 'Todos fetched successfully', todos });
         } catch (error) {
             res.status(500).send({ message: error.message });
         }

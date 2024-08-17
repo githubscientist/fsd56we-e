@@ -2,9 +2,16 @@
 const express = require('express');
 const todoRouter = require('./routes/todoRoutes');
 const requestLogger = require('./utils/logger');
+const cors = require('cors');
 
 // create an express application
 const app = express();
+
+// use the express middleware for enabling CORS
+app.use(cors({
+    origin: 'https://fsd56we-e.onrender.com/',
+    credentials: true
+}));
 
 // use the express middleware for parsing json data
 app.use(express.json());

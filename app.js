@@ -9,7 +9,7 @@ const app = express();
 
 // use the express middleware for enabling CORS
 app.use(cors({
-    origin: 'https://fsd56we-e.onrender.com/',
+    origin: 'http://localhost:5173',
     credentials: true
 }));
 

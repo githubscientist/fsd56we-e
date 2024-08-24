@@ -9,8 +9,9 @@ const app = express();
 
 // use the express middleware for enabling CORS
 app.use(cors({
-    origin: 'http://localhost:5173',
-    credentials: true
+    origin:'http://localhost:5173', 
+    credentials:true,            //access-control-allow-credentials:true
+    optionSuccessStatus:200
 }));
 
 // use the express middleware for parsing json data

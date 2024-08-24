@@ -60,7 +60,7 @@ const userController = {
         response.cookie('token', token, {
             httpOnly: true,
             sameSite: 'none',
-            epires: new Date(new Date().getTime() + 24 * 60 * 60 * 1000), // 24 hours
+            expires: new Date(new Date().getTime() + 24 * 60 * 60 * 1000), // 24 hours
             secure: true
         })
 
@@ -93,6 +93,17 @@ const userController = {
 
             // if the user exists, return the user data
             response.status(200).json({ message: 'User found', user });
+        } catch (error) {
+            response.status(500).json({ message: error.message });
+        }
+    },
+    getAllUsers: async (request, response) => {
+        try {
+            // get all the users from the database
+            const users = await User.find().select('-password -__v -_id');
+
+            // return the users
+            response.status(200).json({ message: 'All users', users });
         } catch (error) {
             response.status(500).json({ message: error.message });
         }
